@@ -1,4 +1,4 @@
-# Day 16: VLANs (Virtual Local Area Networks)
+\# Day 16: VLANs (Virtual Local Area Networks)
 
 ## 📌 Lab Overview
 This lab covers the configuration and verification of VLANs on Cisco Catalyst switches, separating broadcast domains and assigning access ports to designated VLANs.
@@ -21,4 +21,15 @@ This lab covers the configuration and verification of VLANs on Cisco Catalyst sw
 ## 🔍 Verification Commands
 ```bash
 show vlan brief
-show interfaces status
+
+VLAN Name                             Status    Ports
+---- -------------------------------- --------- -------------------------------
+1    default                          active    Fa7/1, Fa9/1
+10   Engineer                         active    Gig0/1, Fa3/1, Fa4/1
+20   HR                               active    Gig1/1, Fa5/1, Fa6/1
+30   Sales                            active    Gig2/1, Fa8/1
+1002 fddi-default                     active    
+1003 token-ring-default               active    
+1004 fddinet-default                  active    
+1005 trnet-default                    active
+
