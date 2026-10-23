@@ -1,0 +1,25 @@
+interface GigabitEthernet0/0
+ ip address 10.0.1.252 255.255.255.0
+ ip ospf 1 area 0
+ duplex auto
+ speed auto
+ standby version 2
+ standby 1 ip 10.0.1.254
+ standby 1 priority 50
+ standby 1 preempt
+!
+R2(config-if)#do sh stand
+GigabitEthernet0/0 - Group 1 (version 2)
+  State is Standby
+    8 state changes, last state change 00:07:17
+  Virtual IP address is 10.0.1.254
+  Active virtual MAC address is 0000.0C9F.F001
+    Local virtual MAC address is 0000.0C9F.F001 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 0.755 secs
+  Preemption enabled
+  Active router is 10.0.1.253, priority 150 (expires in 8 sec)
+    MAC address is 0000.0C9F.F001
+  Standby router is local
+  Priority 50 (configured 50)
+  Group name is hsrp-Gig0/0-1 (default)
